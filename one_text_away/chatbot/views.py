@@ -57,7 +57,7 @@ def getResponse(request):
     choice = request.GET.get('choice')
     
     if i == 11:
-        return HttpResponse(result(score))
+        return HttpResponse(result(score, choice))
 
     if choice == 'anxiety':
         list_of_responses = anxiety.copy()
@@ -68,12 +68,20 @@ def getResponse(request):
     print(score)
     return HttpResponse(list_of_responses[i])
 
-def result(score):
+def result(score, choice):
     message = ""
-    if score <= 13:
-        message = answer[0]
-    if score > 13 and score <= 26:
-        message = answer[1]
+    if choice == 'anxiety':
+        if score <= 13:
+            message = answer[0]
+        if score > 13 and score <= 26:
+            message = answer[1]
+        else:
+            message = answer[2]
     else:
-        message = answer[2]
+        if score <= 13:
+            message = answer[0]
+        if score > 13 and score <= 26:
+            message = answer[1]
+        else:
+            message = answer[2]
     return message
