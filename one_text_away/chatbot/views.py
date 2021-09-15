@@ -72,11 +72,11 @@ def result(score, choice):
     message = ""
     if choice == 'anxiety':
         if score <= 13:
-            message = answer[0]
+            message = answer[2]
         if score > 13 and score <= 26:
             message = answer[1]
         else:
-            message = answer[2]
+            message = answer[0]
     else:
         if score <= 13:
             message = answer[0]
