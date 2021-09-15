@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="home">
+    <div class="content active">
+    <div>
+        <div id="chatbot">
+            <p class="botText"><span>Chatbot: Hello. How are you feeling today?<br>Stress?<br>Anxiety?</span></p>
+        </div>
+        <div id="userInput">
+            <input type="text" name="userMessage" id="textInput" placeholder="Type your message">
+            <input type="submit" name="" id="buttonInput" value="Send">
+        </div>
+    </div>
+
+    <script src="{% static 'css/chatbot/main.js' %}"></script>
+    </div>
+</section>
+{% endblock %}
