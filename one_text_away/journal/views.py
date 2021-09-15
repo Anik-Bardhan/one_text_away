@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Todo
 
 # Create your views here.
+#Created my Jibendu007
 def index(request):
     todo = Todo.objects.all()
     if request.method == 'POST':
