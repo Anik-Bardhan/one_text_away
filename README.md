@@ -11,4 +11,4 @@ The application will also include an 'insights' section providing various articl
 
 
 
-#HACKATHON #DJANGO #HackOfPi
+#HACKATHON #DJANGO #HackOfPi #PYTHON
